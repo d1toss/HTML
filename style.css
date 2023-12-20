@@ -13,6 +13,7 @@
     max-width: 300px; /* максимальная ширина 300px */
     border: 1px solid black; /* черная рамка толщиной в 1px */
     padding: 20px; /* внутренний отступ с каждой стороны по 20px */
+    border-radius: 10px;
    }
 
 .card__image {
@@ -21,6 +22,7 @@
     max-width: 180px; /* максимальная ширина блока под изображение 180px */
     background-color: #a2a2a2; /* серая заливка блока под изображение */
     margin: auto; /* автоматические отступы, центрируем блок  под изображение */
+    border-radius: 10px;
    }
 
 .card__description {
@@ -41,4 +43,22 @@
       width: 95%; /* ширина карточки 95% от ширины контейнера */
     }
    }
+   
+   .button {
+    background-color: tomato;
+    border-radius: 10px;
+    border-color: tomato;
+   }
 
+   /* .menu-list {
+    display: flexbox;
+    list-style-type: none;
+   }
+
+   .heady {
+    font-family: Roboto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 24px;
+    margin-bottom: 20px;
+} */
