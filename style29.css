@@ -1,0 +1,13 @@
+/* Стили для блока с тестом */
+#callback {
+    width: 300px;
+    height: 150px;
+    background-color: grey;
+    position: absolute;
+    bottom: 30px;
+   }
+   /* стили для абзаца */
+   #callback p {
+    color: #fff;
+    padding: 22px;
+   }
