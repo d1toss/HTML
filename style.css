@@ -65,8 +65,9 @@ body {
  margin-top: 30px;
  text-decoration: none;
  text-transform: uppercase;
- color: #fff;
- background-color: #f5dde1;
+ color: #242222;
+ background-color: #ec173b;
+ border-radius: 10px;
 }
 
    /* Стили для блока с тестом */
@@ -80,7 +81,7 @@ body {
    }
    /* стили для абзаца */
    #callback p {
-    color: #181818bbb;
+    color: #181818;
     padding: 22px;
    }
 
@@ -109,7 +110,7 @@ body {
       margin-left: 0;
     }
     to {
-      margin-left: 500px;
+      margin-left: 100%;
     }
    }
 
