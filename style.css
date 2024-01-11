@@ -74,16 +74,16 @@ body {
    #callback {
     width: 300px;
     height: 150px;
-    background-color: white;
+    background-color: rgb(37, 37, 37);
     position: absolute;
-    bottom: 30px;
+    bottom: 10px;
     transform: translateX(-100%);
    }
    /* стили для абзаца */
-   #callback p {
+   /* #callback p {
     color: #181818;
     padding: 22px;
-   }
+   } */
 
    #callback:hover {
     transform: translateX(0%);
@@ -102,7 +102,7 @@ body {
     position: absolute; /* позиционирование абсолютное */
     left: 300px; /* позиция слева равен ширине блока #callback */
     transform: rotate(-90deg);
-    transform-origin: 0 0;
+    transform-origin: 0;
    }
 
    @keyframes myAnim {
