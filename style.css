@@ -107,10 +107,10 @@ body {
 
    @keyframes myAnim {
     from {
-      margin-left: 0;
+      margin-left: 0%;
     }
     to {
-      margin-left: 100%;
+      margin-left: 90%;
     }
    }
 
