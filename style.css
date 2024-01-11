@@ -1,8 +1,12 @@
+body {
+    background-color: wheat;
+}
+
 .link {
     text-decoration: none;
     display: inline-block;
     font-size: 2rem;
-    background-color: #e970e9;
+    background-color: gray;
     border-radius: 5px;
     color: #ffffff;
     transition: all 0.5s ease 0s;
@@ -10,7 +14,7 @@
    }
 
    .link:hover {
-    background-color: #a508a5;
+    background-color: darkgray;
    }
 
    /* Стили для родительского блока */
@@ -69,14 +73,14 @@
    #callback {
     width: 300px;
     height: 150px;
-    background-color: grey;
+    background-color: white;
     position: absolute;
     bottom: 30px;
     transform: translateX(-100%);
    }
    /* стили для абзаца */
    #callback p {
-    color: #fff;
+    color: #181818bbb;
     padding: 22px;
    }
 
@@ -89,7 +93,7 @@
    /*Стили для пседвоэлемента*/
    #callback:after {
     content: 'Обратная связь';
-    background-color: pink;
+    background-color: grey;
     text-align: center;
     border-radius: 0 0 8px 8px;
     padding: 5px 0;
@@ -98,4 +102,24 @@
     left: 300px; /* позиция слева равен ширине блока #callback */
     transform: rotate(-90deg);
     transform-origin: 0 0;
+   }
+
+   @keyframes myAnim {
+    from {
+      margin-left: 0;
+    }
+    to {
+      margin-left: 500px;
+    }
+   }
+
+   h1 {
+    background-color: #6f45e4;
+    width: 30vw;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+   }
+   h1 {
+    animation: myAnim 5s linear alternate infinite;
    }
