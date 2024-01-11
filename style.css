@@ -1,126 +1,100 @@
-body {
-    background-color: wheat;
-}
-
-.link {
-    text-decoration: none;
-    display: inline-block;
-    font-size: 2rem;
-    background-color: gray;
-    border-radius: 5px;
-    color: #ffffff;
-    transition: all 0.5s ease 0s;
-    padding: 15px 25px;
-   }
-
-   .link:hover {
-    background-color: darkgray;
-   }
-
-   /* Стили для родительского блока */
-.card {
-    width: 300px;
-    height: 450px;
-    margin: 0 auto;
-    position: relative; /* относительное позиционирование родительского элемента, чтобы дочерние .product, .description располагать внутри  card */
-    border: 1px solid #f5dde1;
-   }
-
-   .card:hover .product {
-    transform: rotateY(180deg); /* разворачиваем блок с изображением на 180 градусов */
-   }
-   .card:hover .description {
-    transform: rotateY(360deg); /* возвращаем блок*/
-   
-   }
-
-.product,
-.description {
- width: 100%;
- height: 100%;
- position: absolute;
- left: 0; 
- top: 0; 
- text-align: center;
- background-color: #fff;
- backface-visibility: hidden;
-}
-
-.product,
-.description {
- transition: 1s;
-}
-
-.description {
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    padding: 40px;
-    transform: rotateY(
-      180deg
-    );
-}
-/* Стили для кнопки описательного блока карточки товара */
-.description a {
- display: inline-block;
- padding: 10px 30px;
- margin-top: 30px;
- text-decoration: none;
- text-transform: uppercase;
- color: #242222;
- background-color: #ec173b;
- border-radius: 10px;
 }
 
-   /* Стили для блока с тестом */
-   #callback {
-    width: 300px;
-    height: 150px;
-    background-color: white;
+body {
+    background-color: #839b97;
+    height: 100%;
+}
+
+.clock {
+    position:  absolute;
+    height: 200px;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 10px solid rgb(60, 52, 108);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.dot {
     position: absolute;
-    bottom: 30px;
-    transform: translateX(-100%);
-   }
-   /* стили для абзаца */
-   #callback p {
-    color: #181818;
-    padding: 22px;
-   }
+    height: 7px;
+    width: 7px;
+    background-color: #262626;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 100%;
+}
 
-   #callback:hover {
-    transform: translateX(0%);
-    transition: all 0.7s;
+.clock .hour {
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: time 86400s infinite linear;
+}
 
-   }
+.clock .hour:before {
+    content: "";
+    height: 60px;
+    width: 3px;
+    background-color: #262626;
+    position: absolute;
+    top: 30px;
+}
 
-   /*Стили для пседвоэлемента*/
-   #callback:after {
-    content: 'Обратная связь';
-    background-color: grey;
-    text-align: center;
-    border-radius: 0 0 8px 8px;
-    padding: 5px 0;
-    width: 150px; /* ширина псевдоэлемента равна высоте блока */
-    position: absolute; /* позиционирование абсолютное */
-    left: 300px; /* позиция слева равен ширине блока #callback */
-    transform: rotate(-90deg);
-    transform-origin: 0 0;
-   }
+.clock .min {
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: time 3600s infinite linear;
+}
 
-   @keyframes myAnim {
-    from {
-      margin-left: 0;
-    }
+.clock .min:before {
+    content: "";
+    height: 40px;
+    width: 1px;
+    background-color: #262626;
+    position: absolute;
+    top: 50px;
+}
+
+.clock .sec {
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: time 60s infinite linear;
+}
+
+.clock .sec:before {
+    content: "";
+    height: 45px;
+    width: 2px;
+    background-color: #fd1111;
+    position: absolute;
+    top: 45px;
+}
+
+@keyframes time {
     to {
-      margin-left: 500px;
+        transform: rotate(360deg);
     }
-   }
-
-   h1 {
-    background-color: #6f45e4;
-    width: 30vw;
-    color: #fff;
-    text-align: center;
-    border-radius: 20px;
-   }
-   h1 {
-    animation: myAnim 5s linear alternate infinite;
-   }
+}
