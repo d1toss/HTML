@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://green.smartomato.ru/favicon.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="greenstyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зеленая кухня</title>
+    <!-- template for the modal component -->
+    <script type="text/x-template" id="modal-template">
+        <transition name="modal">
+          <div class="modal-mask">
+            <div class="modal-wrapper">
+              <div class="modal-container">
+                <button class="modal-default-button" @click="$emit('close')">
+                    X
+                  </button>
+                <div class="modal-header">
+                  <slot name="header">
+                    aaa
+                  </slot>
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition>
+      </script>
+  </head>
+  <body>
+    <div class="hearder">
+      <div class="logo">
+        <img class="logo" src="img/medium________1 1.png">
+      </div>
+    </div>
+
+    <div class="info">
+      <div class="menu">
+        <div class="namemenu">
+          <p>Меню</p>
+        </div>
+        <div class="hot">
+          <img src="img/hot.png" width="800" height="200">
+          <!-- app -->
+          <div id="app">
+            <button class="namehot" id="show-modal"
+              @click="showModal = true"><p>Завтрак</p></button>
+            <!-- use the modal component, pass in the prop -->
+            <modal v-if="showModal" @close="showModal = false">
+              <h3 slot="header">Завтраки</h3>
+              <table slot="header" class="tableh">
+                <tr>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </table>
+            </modal>
+          </div>
+        </div>
+        <div class="salad">
+          <img src="img/salad.png" width="800" height="200">
+          <!-- app -->
+          <div id="app2">
+            <button class="namesalad" id="show-modal"
+              @click="showModal = true"><p>Обед</p></button>
+            <!-- use the modal component, pass in the prop -->
+            <modal v-if="showModal" @close="showModal = false">
+              <h3 slot="header">Обеды</h3>
+              <table slot="header" class="tables">
+                <tr>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </table>
+            </modal>
+          </div>
+        </div>
+        <div class="blin">
+          <img src="img/blin.png" width="800" height="200">
+          <!-- app -->
+          <div id="app3">
+            <button class="namedin" id="show-modal"
+              @click="showModal = true"><p>Ужин</p></button>
+            <!-- use the modal component, pass in the prop -->
+            <modal v-if="showModal" @close="showModal = false">
+              <h3 slot="header">Ужин</h3>
+              <table slot="header" class="tabled">
+                <tr>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="card">
+                      <div class="product">
+                        <img src="img/1.jpg" width="100"
+                          height="100" alt="image" />
+                      </div>
+                      <div class="description">
+                        Блюдо n
+                        <hr />
+                        <p>
+                          описание
+                        </p>
+                        <a href="#">В корзину</a>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </table>
+            </modal>
+          </div>
+        </div>
+      </div>
+      <div id="callback">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div class="footer"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8"></script>
+    <script>
+        // register modal component
+        Vue.component("modal", {
+          template: "#modal-template"
+        });
+        // start app
+        new Vue({
+          el: "#app",
+          data: {
+            showModal: false
+          }
+        });
+        // start app2
+        new Vue({
+          el: "#app2",
+          data: {
+            showModal: false
+          }
+        });
+        // start app3
+        new Vue({
+          el: "#app3",
+          data: {
+            showModal: false
+          }
+        });
+      </script>
+  </body>
+</html>
