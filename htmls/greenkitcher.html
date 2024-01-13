@@ -39,11 +39,11 @@
           <p>Меню</p>
         </div>
         <div class="hot">
-          <img src="img/hot.png" width="800" height="200">
+          <img class="imghot" src="img/hot.png" width="800" height="200">
           <!-- app -->
           <div id="app">
             <button class="namehot" id="show-modal"
-              @click="showModal = true"><p>Завтрак</p></button>
+              @click="showModal = true">Завтрак</button>
             <!-- use the modal component, pass in the prop -->
             <modal v-if="showModal" @close="showModal = false">
               <h3 slot="header">Завтраки</h3>
@@ -153,11 +153,11 @@
           </div>
         </div>
         <div class="salad">
-          <img src="img/salad.png" width="800" height="200">
+          <img class="imgsalad" src="img/salad.png" width="800" height="200">
           <!-- app -->
           <div id="app2">
             <button class="namesalad" id="show-modal"
-              @click="showModal = true"><p>Обед</p></button>
+              @click="showModal = true">Обед</button>
             <!-- use the modal component, pass in the prop -->
             <modal v-if="showModal" @close="showModal = false">
               <h3 slot="header">Обеды</h3>
@@ -267,11 +267,11 @@
           </div>
         </div>
         <div class="blin">
-          <img src="img/blin.png" width="800" height="200">
+          <img class="imgblin" src="img/blin.png" width="800" height="200">
           <!-- app -->
           <div id="app3">
             <button class="namedin" id="show-modal"
-              @click="showModal = true"><p>Ужин</p></button>
+              @click="showModal = true">Ужин</button>
             <!-- use the modal component, pass in the prop -->
             <modal v-if="showModal" @close="showModal = false">
               <h3 slot="header">Ужин</h3>
