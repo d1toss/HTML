@@ -621,18 +621,18 @@ height: 100px;
 
     /* Стили для блока с тестом */
     #callback {
-    width: 150px;
-    height: 80px;
+    width: 250px;
+    height: 100px;
     background-color: white;
     position: absolute;
-    top: 10px;
+    top: 35px;
     transform: translateX(-100%);
    }
    /* стили для абзаца */
    #callback p {
-    font-size: 9px;
+    font-size: 14px;
     color: #181818;
-    padding: 12.5px;
+    padding: 16px;
    }
 
    #callback:hover {
@@ -648,9 +648,9 @@ height: 100px;
     text-align: center;
     border-radius: 0 0 8px 8px;
     padding: 5px 0;
-    width: 80px; /* ширина псевдоэлемента равна высоте блока */
+    width: 100px; /* ширина псевдоэлемента равна высоте блока */
     position: absolute; /* позиционирование абсолютное */
-    left: 150px; /* позиция слева равен ширине блока #callback */
+    left: 250px; /* позиция слева равен ширине блока #callback */
     transform: rotate(-90deg);
     transform-origin: 0 0;
     color: white;
