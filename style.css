@@ -108,7 +108,7 @@ body {
     right: 0;
     margin: auto;
     border-radius: 10px;
-    bottom: 250px;
+    top: 70%;
     display: flex;
     align-items: center;
     justify-content: center
