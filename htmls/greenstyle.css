@@ -1,0 +1,385 @@
+@font-face {
+    font-family: Marmelad-Regular;
+    src: url(fonts/Marmelad-Regular.ttf);
+}
+
+
+
+* {
+    font-family: Marmelad-Regular;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    height: 100%;
+    background-image: url(img/bggk.png);
+    background-size: cover;
+}
+
+.header {
+    width: 100%;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu {
+    top: 50px;
+    position: relative;
+    width: 900px;
+    height: 800px;
+    background-color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 84px;
+    box-shadow: 0px 10px 50px 10px #00000040;
+    opacity: 1;
+    
+}
+
+.namemenu {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -50px;
+    background-color: white;
+    border-radius: 32px;
+    box-shadow: 0px 4px 25px 5px #00000040;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.namemenu p {
+    position: absolute;
+    font-size: 32px;
+    margin: 0;
+}
+
+.hot {
+    width: 800px;
+    height: 200px;
+    background-color: azure;
+    position: relative;
+    top: 80px;
+    border-radius: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0px 4px 25px 5px #00000040;
+}
+
+.namehot {
+    border: 0px;
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    bottom: 50%;
+    top: 50%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+
+
+}
+
+.namehot:hover {
+    background-color: #e6e6e6;
+    transition: all 0.2s ease-in-out ;
+    width: 310px;
+    height: 110px;
+}
+
+.namehot p {
+    font-size: 32px;
+    color: #000;
+}
+
+
+.tableh {
+    padding: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative; /* относительное позиционирование родительского элемента, чтобы дочерние .product, .description располагать внутри  card */
+    /* border: 1px solid #f5dde1; */
+   }
+
+   .card:hover .product {
+    transform: rotateY(180deg); /* разворачиваем блок с изображением на 180 градусов */
+   }
+   .card:hover .description {
+    transform: rotateY(360deg); /* возвращаем блок*/
+   
+   }
+
+.product,
+.description {
+width: 100px;
+height: 100px;
+ position: absolute;
+ left: 0; 
+ top: 0; 
+ text-align: center;
+ background-color: #fff;
+ backface-visibility: hidden;
+ font-size: 12px;
+}
+
+.product,
+.description {
+ transition: 1s;
+}
+
+.description {
+    box-sizing: border-box;
+    /* padding: 40px; */
+    transform: rotateY(
+      180deg
+    );
+}
+/* Стили для кнопки описательного блока карточки товара */
+.description a {
+    width: 80px;
+ display: inline-block;
+ /* padding: 10px 30px; */
+ margin-top: 30px;
+ text-decoration: none;
+ text-transform: uppercase;
+ color: #242222;
+ background-color: #66af66;
+ border-radius: 5px;
+ font-size: 12px;
+ padding: 3px;
+}
+
+.description a:hover {
+    background-color: #a0daa0;
+    transition: all 0.4s ease-in-out;
+}
+
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: table;
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .modal-container {
+    width: 370px;
+    margin: 0px auto;
+    padding: 20px 20px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+    transition: all 0.3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  .modal-header h3 {
+    margin-top: 0;
+    color: #66af66;
+    text-align: center;
+  }
+  
+  .modal-body {
+    margin: 20px 0;
+  }
+  
+  .modal-default-button {
+    float: right;
+  }
+  
+  /*
+   * The following styles are auto-applied to elements with
+   * transition="modal" when their visibility is toggled
+   * by Vue.js.
+   *
+   * You can easily play with the modal transition by editing
+   * these styles.
+   */
+  
+  .modal-enter {
+    opacity: 0;
+  }
+  
+  .modal-leave-active {
+    opacity: 0;
+  }
+  
+  .modal-enter .modal-container,
+  .modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .modal-default-button {
+    border: none;
+    background-color: none;
+  }
+
+  .salad {
+    bottom: 70px;
+    width: 800px;
+    height: 200px;
+    background-color: azure;
+    position: absolute;
+    top: 80px;
+    border-radius: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0px 4px 25px 5px #00000040;
+}
+
+.namesalad {
+    border: 0px;
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    bottom: 50%;
+    top: 50%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+
+
+}
+
+.namesalad:hover {
+    background-color: #e6e6e6;
+    transition: all 0.2s ease-in-out ;
+    width: 310px;
+    height: 110px;
+}
+
+.namesalad p {
+    font-size: 32px;
+    color: #000;
+}
+
+.blin {
+    width: 800px;
+    height: 200px;
+    background-color: azure;
+    position: absolute;
+    top: 530px;
+    border-radius: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0px 4px 25px 5px #00000040;
+}
+
+.namedin {
+    border: 0px;
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    bottom: 50%;
+    top: 50%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+
+
+}
+
+.namedin:hover {
+    background-color: #e6e6e6;
+    transition: all 0.2s ease-in-out ;
+    width: 310px;
+    height: 110px;
+}
+
+.namedin p {
+    font-size: 32px;
+    color: #000;
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    background-color: azure;
+    position: absolute;
+    top: 1100px;
+    border-radius: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+}
+
+/* Стили для блока с тестом */
+#callback {
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    transform: translateX(-95%);
+   }
+   /* стили для абзаца */
+   #callback p {
+    color: #181818;
+    padding: 27.5px;
+   }
+
+   #callback:hover {
+    transform: translateX(0%);
+    transition: all 0.7s;
+
+   }
+
+   /*Стили для пседвоэлемента*/
+   #callback:after {
+    content: 'Что-то';
+    background-color: #66af66;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    padding: 5px 0;
+    width: 150px; /* ширина псевдоэлемента равна высоте блока */
+    position: absolute; /* позиционирование абсолютное */
+    left: 300px; /* позиция слева равен ширине блока #callback */
+    transform: rotate(-90deg);
+    transform-origin: 0;
+    color: white;
+   }
